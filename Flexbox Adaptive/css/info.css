@@ -1,0 +1,44 @@
+.info {
+    padding: 80px 0 70px 0;
+}
+
+.info__block {
+    max-width: 67%;
+}
+
+.info__title {
+    font-weight: 400;
+    color: var(--black);
+    font-size: 48px;
+    margin-bottom: 26px;
+}
+
+.info__descr {
+    color: var(--black);
+    font-size: 16px;
+    line-height: 32px;
+}
+
+@media (max-width: 1248px) {
+
+    .info__block {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 646px) {
+
+    .info {
+        padding: 50px 0 41px 0;
+    }
+
+    .info__title {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .info__descr {
+        font-size: 14px;
+        line-height: 28px;
+    }
+}

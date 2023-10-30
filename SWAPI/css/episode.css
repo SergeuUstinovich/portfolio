@@ -1,0 +1,16 @@
+@import "normalize.css";
+@import "config.css";
+
+#app {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.btn{
+    transition: color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    color: blue;
+}

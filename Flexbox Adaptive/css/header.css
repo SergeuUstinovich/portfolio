@@ -1,0 +1,169 @@
+.header {
+    background: #000;
+    padding: 28px 0;
+}
+
+.header__container {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    padding-right: 20px;
+}
+
+.header__nav {
+    max-width: 931px;
+    width: 100%;
+    margin-right: 134px;
+    padding-bottom: 3px;
+}
+
+.header__list {
+    justify-content: space-between;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header__item-link {
+    padding-left: 3px;
+    padding-right: 3px;
+    transition: color .3s ease-in-out;
+}
+
+.header__item-link:focus {
+    background-color: var(--lightviolet);
+}
+
+.header__item-link:hover {
+    color: var(--violet);
+}
+
+.header__item-link:active {
+    color: var(--lightviolet);
+    background-color: var(--black);
+}
+
+.header__btn {
+    height: 28px;
+}
+
+.header__btn {
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__btn svg {
+    fill: var(--white);
+    transition: fill .3s ease-in-out;
+}
+
+.header__btn:focus {
+    background-color: var(--lightviolet);
+}
+
+.header__btn:active {
+    background-color: var(--black);
+}
+
+.header__btn:hover svg {
+    fill: var(--violet);
+}
+
+.header__btn:active svg {
+    fill: var(--blackviolet);
+    background-color: var(--black);
+}
+
+
+.nav-vis {
+    display: none;
+}
+
+@media (max-width: 1248px) {
+
+    .header {
+        padding-bottom: 28px;
+    }
+
+    .nav-invis {
+        display: none;
+    }
+
+    .nav-vis {
+        display: block;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+    }
+
+    .header__logo {
+        margin-bottom: 24px;
+    }
+
+    .header__logo img {
+        width: 188px;
+    }
+
+    .header__nav {
+        max-width: none;
+        margin-right: 0;
+        padding-bottom: 0;
+    }
+
+    .header__btn {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .header {
+        padding-bottom: 28px;
+    }
+
+    .header__logo {
+        margin-bottom: 23px;
+    }
+
+    .header__btn {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 646px) {
+
+    .header {
+        padding: 16px 0 10px 0;
+    }
+
+    .header__logo {
+        margin-bottom: 11px;
+    }
+
+    .header__logo img {
+        width: 97px;
+    }
+
+    .header__btn {
+        width: 18px;
+        height: 18px;
+    }
+
+    .header__nav {
+        min-width: 431px;
+    }
+
+    .header__list {
+        font-size: 12px;
+    }
+
+    .header__btn {
+        margin-bottom: 14px;
+    }
+
+}

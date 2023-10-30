@@ -1,0 +1,237 @@
+.active-modal {
+    animation: fade .3s ease-in-out .3s forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__form-container {
+    padding: 0 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+
+.modal__title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.input-wrapper > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    font-size: 14px;
+    padding-top: 5px;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+    color: var(--color-silver-chalice);
+}
+
+.input-wrapper > .modal__input:focus~label,
+.input-wrapper > .modal__input:not(:placeholder-shown)~label {
+    top: -10px;
+    transform: scale(.85) translate(.15rem, -.5rem);
+}
+
+.modal__input::placeholder {
+    font-size: 0;
+}
+
+.modal__input {
+    height: 28px;
+    display: block;
+    outline: none;
+    width: 100%;
+    border: none;
+    color: var(--black);
+    border-bottom: 1px solid var(--grey);
+}
+
+.label-span {
+    color: var(--violet);
+}
+
+.modal__input:nth-child(-n+3) {
+    margin-bottom: 15px;
+}
+
+.modal__input::placeholder {
+    color: var(--grey);
+}
+
+.modal__add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(200, 197, 209, 0.3);
+    margin-bottom: 25px;  
+}
+
+.modal__add-block {
+    z-index: 10;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.modal__add-btn {
+    display: none;
+    padding: 8px 0;
+    transition: color .3s ease-in-out;
+}
+
+.modal__add-btn.modal__add-btn--active{
+    display: flex;
+}
+
+.modal__add-btn:hover {
+    color: var(--violet);
+}
+    
+.modal__container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal__btn-save {
+    margin-bottom: 5px;
+}
+
+.modal__save {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 17px 35px;
+    background-color: var(--violet);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    transition: opacity .3s;
+}
+
+.modal__save:hover {
+    opacity: 0.7;
+}
+
+.modal__btn-close {
+    margin-bottom: 30px;
+}
+
+.modal__close {
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+    transition: color .3s, border .3s;
+}
+
+.modal__close:hover {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.btn__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.btn__close svg path {
+    transition: fill .3s;
+}
+
+.btn__close:hover svg path{
+    fill: red;
+}
+
+.modal__id {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey);
+    margin-left: 9px;
+}
+
+.modal__error {
+    margin: 0;
+    margin-top: -17px;
+    line-height: 14px;
+    font-size: 10px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 255px;
+    color: red;
+}
+
+.modal__spinner {
+    position: absolute;
+    display: none;
+    top: 18px;
+    left: 15px;
+    animation: spinner .3s ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.modal__spinner svg {
+    width: 15px;
+    height: 15px;
+    stroke: white;
+    fill: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+@media(max-width: 576px) {
+
+    .modal__title {
+        padding-left: 15px;
+    }
+
+    .modal__form-container {
+        padding: 0 15px;
+    }
+}
+

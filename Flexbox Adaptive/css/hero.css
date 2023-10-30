@@ -1,0 +1,128 @@
+.hero {
+    background-image: url("../img/hero-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__block {
+    padding: 146px 0;
+    max-width: 35%;
+}
+
+.hero__title {
+    color: var(--white);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 68px;
+    margin-bottom: 20px;
+}
+
+.hero__descr {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 92px;
+}
+
+.hero__btn {
+    padding: 25px 35px;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 100px;
+    background: #9D5CD0;
+    transition: background-color .3s ease-in-out;
+}
+
+.hero__btn:focus {
+    outline: none;
+    outline: 2px solid var(--violet);
+    outline-offset: 5px;
+}
+
+.hero__btn:hover {
+    outline: 3px solid #D1A9F0;
+    outline-offset: 0;
+}
+
+.hero__btn:active {
+    background-color: var(--lightviolet);
+    outline: 3px solid #D1A9F0;
+    outline-offset: 0;
+}
+
+.hero__br {
+    display: none;
+}
+
+@media (max-width: 1248px) {
+
+    .hero {
+        background-image: url("../img/hero-back-1024.jpg");
+    }
+
+    .hero__block {
+        padding: 101px 0;
+        max-width: 75%;
+    }
+
+    .hero__descr {
+        margin-bottom: 133px;
+    }
+
+    .hero__br {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .hero {
+        background-image: url("../img/hero-back-768.jpg");
+    }
+
+    .hero__block {
+        padding: 87px 0;
+        max-width: 80%;
+    }
+
+    .hero__br {
+        display: none;
+    }
+}
+
+@media (max-width: 646px) {
+
+    .hero {
+        background-image: url("../img/hero-back-320.jpg");
+    }
+
+    .hero__block {
+        padding: 50px 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 32px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero__descr {
+        font-size: 12px;
+        line-height: 17px;
+        margin-bottom: 38px;
+        font-weight: 400;
+    }
+
+    .hero__btn {
+        padding: 11px 16px 14px 19px;
+        font-size: 12px;
+    }
+
+    .hero__br {
+        display: block;
+    }
+}
