@@ -6,5 +6,5 @@ https://sergeuustinovich.github.io/portfolio/Flexbox%20Adaptive/    (Flex)
 
 https://sergeuustinovich.github.io/portfolio/Grid_Gulp/dist/   (grid со сборщиком Gulp)
 
-https://sergeuustinovich.github.io/portfolio/SWAPI/     (долго публичный API Отввечает)
+https://sergeuustinovich.github.io/portfolio/SWAPI/     (долго публичный API отвечает)
 
