@@ -1,0 +1,290 @@
+@import '_variables';
+@import '_mixin';
+
+.hero__flex{
+    display: flex;
+}
+
+.hero {
+    margin-bottom: 68px;
+
+    &__block {
+        background-image: url('../img/hero_neon.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        max-width: 630px;
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        margin-right: 30px;
+    
+        &-span {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background-color: $BlackBrown;
+            color: $white;
+            padding: 7px 15px;
+            font-family: "Roboto";
+            font-size: 14px;
+            font-weight: 400;
+        }
+    
+        &-content {
+            padding: 60px;
+            font-family: "Roboto";
+            color: $white;
+            line-height: normal;
+        }
+    
+        &-descr {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 3px;
+        }
+    
+        &-title {
+            font-family: "TT Firs Neue";
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 19px;
+            line-height: 104%;
+        }
+    
+        &-btn {
+            font-family: "Roboto";
+            color: $white;
+            padding: 15px 22px;
+            background-color: $orange;
+            font-size: 16px;
+            font-weight: 700;
+            transition: background-color .3s ease-in-out;
+        }
+
+        &-btn:hover {
+            background-color: $orangeFocus;
+        }
+
+        &-btn:focus {
+            background-color: $orange;
+            outline: 3px solid $orangeActive;
+        }
+
+        &-btn:active {
+            background-color: $orangeActive;
+            outline: none;
+        }
+    }
+
+    &__content{
+
+        width: 100%;
+        
+        &-title{
+            font-family: 'TT Firs Neue';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 104%;
+            margin-bottom: 18px;
+        }
+
+        &-img {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            
+            img{
+                display: block;
+            }
+        }
+
+        &-orde {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .hero {
+    
+        &__block {
+            background-image: url('../img/hero_neon-1024.jpg');
+
+            &-content{
+                padding: 30px;
+            }
+
+            &-descr {
+                margin-bottom: 9px;
+            }
+        
+            &-title {
+                font-size: 34px;
+                margin-bottom: 22px;
+                line-height: 100%;
+            }              
+        }
+
+        &__content{
+            
+            &-title{
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .hero {
+
+        &__container {
+            padding: 0 27px;
+        }
+
+        &__block {
+            background-image: url('../img/hero_neon-768.jpg');
+
+            &-descr {
+                margin-bottom: 14px;
+            }
+
+            &-title {
+                font-size: 34px;
+                margin-bottom: 22px;
+                line-height: 90%;
+            }              
+        }
+
+        &__content{
+            
+            &-title{
+                font-size: 22px;
+                margin-bottom: 17px;
+                line-height: 104%;
+            }
+        }
+    }
+}
+
+@media(max-width: 580px) {
+    .hero {
+
+        &__block {
+           
+            &-descr {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+
+            &-title {
+                font-size: 20px;
+                margin-bottom: 22px;
+                line-height: 90%;
+            }   
+            
+            &-btn {
+                font-size: 14px;
+                line-height: normal;
+                padding: 10px 22px;
+            }  
+        }
+
+        &__content{
+            
+            &-title{
+                font-size: 14px;
+            }
+            
+        }
+    }
+}
+
+@media(max-width: 460px){
+
+    .hero {
+
+        &__block {
+            &-descr {
+                margin-bottom: 10px;
+            }
+
+            &-title {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+
+            &-btn {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width: 420px) {
+    
+    .hero {
+
+        margin-bottom: 51px;
+
+        &__flex {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        &__container {
+            padding: 0 21px;
+        }
+        
+        &__block {
+            background-image: url('../img/hero_neon-1024.jpg');
+            min-height: 422px;
+            margin-bottom: 34px;
+            
+            &-span {
+                right: 5px;
+                top: 10px;
+                padding: 2px 7px;
+                font-family: "Roboto";
+                font-size: 12px;
+            }
+
+            &-descr {
+                margin-bottom: 10px;
+            }
+
+            &-title {
+                font-size: 24px;
+                margin-bottom: 14px;
+                line-height: 110%;
+            } 
+
+            &-btn {
+                font-size: 14px;
+            }             
+        }
+
+        &__content{
+            
+            &-title{
+                font-size: 18px;
+                margin-bottom: 16px;
+                line-height: 104%;
+            }
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .hero {
+        &__block {
+            background-image: url('../img/hero_neon-320.jpg');
+        }
+    }
+}
+

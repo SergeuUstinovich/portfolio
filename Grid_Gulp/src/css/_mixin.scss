@@ -1,0 +1,9 @@
+@import '_variables';
+
+@mixin navText {
+    color: $white;
+    font-size: 16px;
+    font-family: 'TT Firs Neue';
+    font-weight: 400;
+    line-height: normal;
+}

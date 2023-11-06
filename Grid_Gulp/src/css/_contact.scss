@@ -1,0 +1,404 @@
+@import '_variables';
+@import '_mixin';
+
+.contact {
+
+    margin-bottom: 69px;
+
+    &-br {
+        display: none;
+    }
+
+    &__title {
+        font-family: 'TT Firs Neue';
+        font-size: 24px;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 22px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__map {
+        background-image: url('../img/contact_map.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        position: relative;
+        max-width: 850px;
+        width: 100%;
+        margin-right: 30px;
+
+        &-ellips {
+            position: absolute;
+            top: 95px;
+            right: 227px;
+        }
+
+        &-info {
+            background-color: $BlackBrown;
+            opacity: 0.85;
+            color: $white;
+            height: 100%;
+            max-width: 410px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        &-cancel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        &-block {
+            max-width: 300px;
+            padding-top: 28px;
+            padding-left: 5px;
+        }
+
+        &-title {
+            font-family: 'TT Firs Neue';
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 8px;
+        }
+
+        &-descr {
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $ligthgrey;
+            margin-bottom: 3px;
+        }
+
+        &-link {
+            display: flex;
+            color: $orange;
+            font-family: 'TT Firs Neue';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 410px;
+
+        &-title {
+            font-family: 'TT Firs Neue';
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        &-forms {
+            max-width: 410px;
+            width: 100%;
+        }
+
+        &-descr {
+            font-family: 'Roboto';
+            font-size: 16px;
+            color: $greyDate;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 14px;
+        }
+
+        &-input {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px 23px;
+            border: none;
+            outline: none;
+            background-color: $greyInput;
+        }
+
+        &-input:hover::placeholder {
+            color: $orange;
+        }
+
+        &-input:active {
+            outline: 1px solid $orange;
+        }
+
+        &-input:active::placeholder {
+            color: $greyDate;
+        }
+
+        &-input::placeholder{
+            color: $greyDate;
+            transition: color .3s ease-in-out;
+        }
+
+        &-text {
+            width: 100%;
+            margin-bottom: 19px;
+            max-height: 150px;
+            padding: 15px 23px;
+            border: none;
+            outline: none;
+            background-color: $greyInput;
+            resize: none;
+        }
+
+        &-text:hover::placeholder {
+            color: $orange;
+        }
+
+        &-text:active {
+            outline: 1px solid $orange;
+        }
+
+        &-text:active::placeholder {
+            color: $greyDate;
+        }
+
+        &-text::placeholder{
+            color: $greyDate;
+            transition: color .3s ease-in-out;
+        }
+
+        &-btn {
+            display: block;
+            color: $white;
+            padding: 15px 22px;
+            background-color: $orange;
+            transition: background-color .3s ease-in-out;
+        }
+
+        &-btn:hover {
+            background-color: $orangeFocus;
+        }
+
+        &-btn:focus {
+            background-color: $orange;
+            outline: 3px solid $orangeActive;
+        }
+
+        &-btn:active {
+            background-color: $orangeActive;
+            outline: none;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+
+    .contact {
+
+        &-br {
+            display: block;
+        }
+
+        &__map {
+            background-image: url('../img/contact_map-1024.jpg');
+            display: flex;
+            align-items: flex-end;
+
+            &-title {
+                margin-bottom: 4px;
+            }
+
+            &-ellips {
+                right: 94px;
+            }
+
+            &-info {
+                max-width: 100%;
+                width: 100%;
+                max-height: 157px;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 25px 30px 21px;
+            }
+
+            &-block {
+                padding: 0;
+                max-width: 320px;
+            }
+
+            &-link {
+                display: inline;
+            }
+        }
+
+        &__form {
+
+        max-width: 342px;
+
+            &-forms {
+                max-width: 342px;
+                
+            }
+
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    .contact {
+
+        &__container {
+            padding: 0 27px;
+        }
+
+        &-br {
+            display: none;
+        }
+
+        &__block {
+            flex-direction: column;
+        }
+
+        &__map {
+            background-image: url('../img/contact_map-768.jpg');
+            height: 460px;
+            margin-right: 0;
+            margin-bottom: 24px;
+
+            &-title {
+                margin-bottom: 4px;
+            }
+
+            &-ellips {
+                right: 218px;
+            }
+
+            &-block {
+                padding: 0;
+                max-width: 436px;
+            }
+
+            &-link {
+                display: flex;
+            }
+
+            &-descr {
+                display: block;
+            }
+        }
+
+        &__form {
+
+        max-width: 466px;
+
+            &-forms {
+                max-width: 466px;
+            }
+
+            &-title {
+                margin-bottom: 5px;
+            }
+
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .contact {
+
+        &__container {
+            padding: 0 0;
+        }
+
+        &__title {
+            font-size: 18px;
+            margin-bottom: 14px;
+            padding: 0 21px;
+        }
+
+        &__map {
+            
+
+            height: 472px;
+          
+            margin-bottom: 24px;
+
+            &-title {
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            &-ellips {
+                right: 45px;
+            }
+
+            &-block {
+                padding: 0;
+                max-width: 436px;
+            }
+
+            &-info {
+                padding: 26px 0 14px 19px;
+            }
+
+            &-link {
+            
+            }
+
+            &-descr {
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+        }
+
+        &__form {
+
+            padding: 0 21px;
+    
+                &-forms {
+                    max-width: 466px;
+                }
+    
+                &-title {
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                }
+
+                &-descr {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+
+                &-input {
+                    padding: 12px 23px;
+                    font-size: 14px;
+                }
+
+                &-text {
+                    padding: 12px 23px;
+                    font-size: 14px;
+                }
+
+                &-btn {
+                    font-size: 14px;
+                    padding: 12px 23px;
+                }
+    
+            }
+    }
+}
+
+@media(max-width: 320px) {
+    .contact {
+        margin-bottom: 50px;
+        &__map {
+            background-image: url('../img/contact_map-320.jpg');
+        }
+    }
+}

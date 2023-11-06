@@ -1,0 +1,246 @@
+@import '_variables';
+@import '_mixin';
+
+.studio {
+    background-color: $BlackBrown;
+    color: $white;
+    padding-bottom: 70px;
+
+    &__title {
+        padding-top: 30px;
+        margin-bottom: 5px;
+        font-family: 'TT Firs Neue';
+        font-size: 24px;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__content{
+        display: flex;
+    }
+
+    &__descr {
+        max-width: 630px;
+        color: $ligthgrey;
+        margin-right: 30px;
+
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    &__newsletter {
+
+        
+
+
+        &-img{
+            margin-bottom: 17px;
+        }
+
+        &-title {
+            font-family: 'TT Firs Neue';
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 16px;
+        }
+
+        &-form {
+            display: flex;
+            justify-content: space-between;
+            max-width: 630px;
+            width: 100%;
+        }
+
+        &-input {
+            margin-right: 30px;
+            background-color: $grey;
+            border: none;
+            padding: 15px 23px;
+            width: 100%;
+            color: $white;
+            outline: none;
+        }
+
+        &-input:hover::placeholder {
+            color: $orange;
+        }
+
+        &-input:active {
+            outline: 1px solid $orange;
+        }
+
+        &-input:active::placeholder {
+            color: $white;
+        }
+
+        &-input::placeholder{
+            color: $ligthgrey;
+            transition: color .3s ease-in-out;
+        }
+
+        &-btn {
+            display: block;
+            padding: 15px 22px;
+            color: $white;
+            background-color: $orange;
+            transition: background-color .3s ease-in-out;
+        }
+
+        &-btn:hover {
+            background-color: $orangeFocus;
+        }
+
+        &-btn:focus {
+            background-color: $orange;
+            outline: 3px solid $orangeActive;
+        }
+
+        &-btn:active {
+            background-color: $orangeActive;
+            outline: none;
+        }
+    }
+}
+
+@media(max-width: 1224px) {
+    .studio {
+
+        padding-bottom: 83px;
+
+        &__descr {
+            max-width: 466px;
+        }
+
+        &__content{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__newsletter {
+
+            &-form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &-input {
+                margin-right: 0;
+                margin-bottom: 20px;
+                max-width: 342px;
+            }
+
+        }
+        
+    }
+}
+
+@media(max-width: 868px) {
+    .studio {
+
+    padding-bottom: 63px;
+
+        &__container {
+            padding: 0 27px;
+        }
+
+        &__title {
+            margin-bottom: 3px;
+        }
+
+        &__descr {
+            max-width: 342px;
+        }
+
+        &__newsletter {
+
+        max-width: 342px;
+
+            &-title {
+                
+                margin-bottom: 18px;
+            }
+
+        }
+        
+    }
+}
+
+@media(max-width: 650px) {
+
+    .studio {
+
+        &__container {
+            padding: 0 21px;
+        }
+
+        &__content{
+            flex-direction: column;
+            
+        }
+
+        &__descr {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 18px;
+        }
+
+        &__newsletter {
+
+            max-width: 100%;
+    
+                &-title {
+                    
+                    margin-bottom: 18px;
+                }
+    
+            }
+    }
+
+}
+
+@media(max-width: 350px) {
+
+    .studio {
+
+        padding-bottom: 57px;
+
+        &__title {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+
+        &__descr {
+            font-size: 14px;
+            line-height: 25px;
+            margin-bottom: 22px;
+        }
+
+        &__newsletter {
+    
+                &-title {
+                    font-size: 18px;
+                    margin-bottom: 14px;
+                }
+
+                &-img{
+                    margin-bottom: 21px;
+                }
+
+                &-input{
+                    padding: 12px 23px;
+                }
+
+                &-btn {
+                    font-size: 14px;
+                    padding: 12px 22px;
+                }
+    
+            }
+    }
+
+}
