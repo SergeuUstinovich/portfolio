@@ -66,6 +66,10 @@ html {
     --lightviolet:#7943A4;;
   }
 
+  /* *{
+    outline: 1px solid orange;
+  } */
+
   @media (max-width: 646px){
     
     .cont-mobil{

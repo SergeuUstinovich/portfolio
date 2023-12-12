@@ -17,6 +17,7 @@
     width: 100%;
     margin-right: 134px;
     padding-bottom: 3px;
+   
 }
 
 .header__list {
@@ -24,6 +25,7 @@
     color: var(--white);
     font-size: 18px;
     font-weight: 600;
+    
 }
 
 .header__item-link {
@@ -154,16 +156,28 @@
         height: 18px;
     }
 
-    .header__nav {
+    /* .header__nav {
         min-width: 431px;
-    }
+    } */
 
     .header__list {
         font-size: 12px;
+        flex-wrap: wrap;
     }
 
     .header__btn {
         margin-bottom: 14px;
     }
 
+}
+
+@media (max-width: 386px) {
+    .header__item:nth-child(1) {
+        margin-right: 22%;
+        margin-bottom: 5px;
+    }
+
+    .header__item:nth-child(2) {
+        margin-right: 20%;
+    }
 }
